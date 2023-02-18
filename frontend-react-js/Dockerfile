@@ -1,0 +1,17 @@
+FROM node:16.18
+
+ENV PORT=3000
+
+COPY . /frontend-react-js
+WORKDIR /frontend-react-js
+RUN npm install
+
+ENV FLASK_ENV=development
+ENV GITPOD_WORKSPACE_ID=krga-awsbootcampcrudd-u9rqfgo81x9
+ENV GITPOD_WORKSPACE_CLUSTER_HOST=ws-eu87.gitpod.io
+ENV FRONTEND_URL="https://3000-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
+ENV BACKEND_URL="https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}"
+
+EXPOSE ${PORT}
+
+CMD ["npm", "start"]

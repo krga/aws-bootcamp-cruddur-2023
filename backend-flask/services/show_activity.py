@@ -11,7 +11,7 @@ class ShowActivities:
       'replies': {
         'uuid': '26e12864-1c26-5c3a-9658-97a10f8fea67',
         'handle':  'Worf',
-        'message': 'This post has no honor!',
+        'message': 'This post has no honor 1234!',
         'created_at': (now - timedelta(days=2)).isoformat()
       }
     }]
